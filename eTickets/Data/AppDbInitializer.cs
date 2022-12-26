@@ -137,9 +137,9 @@ namespace eTickets.Data
                 //Movies
                 if (!context.Movies.Any())
                 {
-                    context.Movies.AddRange(new List<Movie>()
+                    context.Movies.AddRange(new List<NewMovieVM>()
                     {
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "Life",
                             Description = "This is the Life movie description",
@@ -151,7 +151,7 @@ namespace eTickets.Data
                             ProducerId = 3,
                             MovieCategory = MovieCategory.Documentary
                         },
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "The Shawshank Redemption",
                             Description = "This is the Shawshank Redemption description",
@@ -163,7 +163,7 @@ namespace eTickets.Data
                             ProducerId = 1,
                             MovieCategory = MovieCategory.Action
                         },
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "Ghost",
                             Description = "This is the Ghost movie description",
@@ -175,7 +175,7 @@ namespace eTickets.Data
                             ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
                         },
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "Race",
                             Description = "This is the Race movie description",
@@ -187,7 +187,7 @@ namespace eTickets.Data
                             ProducerId = 2,
                             MovieCategory = MovieCategory.Documentary
                         },
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "Scoob",
                             Description = "This is the Scoob movie description",
@@ -199,7 +199,7 @@ namespace eTickets.Data
                             ProducerId = 3,
                             MovieCategory = MovieCategory.Cartoon
                         },
-                        new Movie()
+                        new NewMovieVM()
                         {
                             Name = "Cold Soles",
                             Description = "This is the Cold Soles movie description",

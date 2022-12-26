@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eTickets.Models
 {
-    public class Movie : IEntityBase
+    public class NewMovieVM : IEntityBase
     {
         [Key]
         public int Id { get; set; }

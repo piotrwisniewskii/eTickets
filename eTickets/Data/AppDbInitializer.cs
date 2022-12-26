@@ -2,9 +2,10 @@
 using eTickets.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace eTickets.Data
 {
@@ -12,7 +13,7 @@ namespace eTickets.Data
     {
         public static void Seed(IApplicationBuilder applicationBuilder)
         {
-            using ( var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
+            using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
@@ -137,9 +138,9 @@ namespace eTickets.Data
                 //Movies
                 if (!context.Movies.Any())
                 {
-                    context.Movies.AddRange(new List<NewMovieVM>()
+                    context.Movies.AddRange(new List<Movie>()
                     {
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "Life",
                             Description = "This is the Life movie description",
@@ -151,7 +152,7 @@ namespace eTickets.Data
                             ProducerId = 3,
                             MovieCategory = MovieCategory.Documentary
                         },
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "The Shawshank Redemption",
                             Description = "This is the Shawshank Redemption description",
@@ -163,7 +164,7 @@ namespace eTickets.Data
                             ProducerId = 1,
                             MovieCategory = MovieCategory.Action
                         },
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "Ghost",
                             Description = "This is the Ghost movie description",
@@ -175,7 +176,7 @@ namespace eTickets.Data
                             ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
                         },
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "Race",
                             Description = "This is the Race movie description",
@@ -187,7 +188,7 @@ namespace eTickets.Data
                             ProducerId = 2,
                             MovieCategory = MovieCategory.Documentary
                         },
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "Scoob",
                             Description = "This is the Scoob movie description",
@@ -199,7 +200,7 @@ namespace eTickets.Data
                             ProducerId = 3,
                             MovieCategory = MovieCategory.Cartoon
                         },
-                        new NewMovieVM()
+                        new Movie()
                         {
                             Name = "Cold Soles",
                             Description = "This is the Cold Soles movie description",

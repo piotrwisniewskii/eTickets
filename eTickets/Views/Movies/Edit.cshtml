@@ -1,14 +1,15 @@
 ﻿@model NewMovieVM
-@using eTickets.Data.Enums
+@using eTickets.Data;
+@using eTickets.Data.Enums;
 
 @{
-    ViewData["Title"] = "Update  movie";
+    ViewData["Title"] = "Update movie";
 }
 
 <div class="row">
     <div class="col-md-8 offset-2">
         <p>
-            <h4>Updatemovie</h4>
+            <h4>Update movie</h4>
         </p>
 
         <div class="row">
@@ -62,7 +63,7 @@
                             </div>
                             <div class="form-group">
                                 <label asp-for="ActorIds" class="control-label"></label>
-                                <select asp-for="ActorIds" class="form-control" asp-items="ViewBag.Actors"></select>
+                                <select asp-for="ActorIds" class="form-control"  asp-items="ViewBag.Actors" multiple></select>
                                 <span asp-validation-for="ActorIds" class="text-danger"></span>
                             </div>
                         </div>
@@ -93,16 +94,14 @@
 </div>
 
 @section Scripts{ 
-            <script>
-                $(document).ready(function () {
-                        var output = document.getElementById("ImageUrlPreview");
-                            output.src = $("#ImageURL").val();
-                });
-
-
-                $("#ImageURL").on("change", function () {
-                    var output = document.getElementById("ImageUrlPreview");
-                    output.src = $(this).val();
-                })
-            </script>
+        <script>
+            $(document).ready(function () {
+                var output = document.getElementById("ImageUrlPreview");
+                output.src = $("#ImageURL").val();
+            });
+            $("#ImageURL").on("change", function () {
+                var output = document.getElementById("ImageUrlPreview");
+                output.src = $(this).val();
+            })
+        </script>
 }
